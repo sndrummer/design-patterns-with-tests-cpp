@@ -21,7 +21,6 @@ protected:
 	void TearDown() override
 	{
 	}
-
 };
 
 /*
@@ -44,7 +43,6 @@ TEST_F(DecoratorTests, testAttackWithClub)
 	clubbedTroll.attack();
 	const auto output = testing::internal::GetCapturedStdout();
 	EXPECT_EQ("The Troll attacks with a club", output);
-	
 }
 
 /*
@@ -54,7 +52,5 @@ TEST_F(DecoratorTests, testAttackWithClub)
 TEST_F(DecoratorTests, testGetNameClubbed)
 {
 	ClubbedTroll clubbedTroll(mpTroll.get());
-	
 	EXPECT_EQ(clubbedTroll.getName(), "Sam, the clubbed troll");
-
 }

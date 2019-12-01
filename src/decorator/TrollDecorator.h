@@ -4,6 +4,8 @@
 /*
  * Decorator abstract class that adds functionality to the Troll
  * Honestly not the greatest use of a decorator but at least you get the idea
+ *
+ * This class simply delegates the methods to the mpTroll pointer
  */
 class TrollDecorator : public ITroll
 {
