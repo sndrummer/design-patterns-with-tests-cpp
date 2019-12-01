@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "UglyTroll.h"
+#include <decorator/UglyTroll.h>
 
 UglyTroll::UglyTroll(ITroll* troll) : TrollDecorator(troll)
 {
