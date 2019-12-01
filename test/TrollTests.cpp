@@ -1,15 +1,19 @@
 #include "pch.h"
 #include <decorator/BasicTroll.h>
+#include <decorator/ClubbedTroll.h>
 #include "gtest/gtest.h"
+#include <memory>
 
 
-// The fixture for testing class Foo.
+// The fixture for testing the decorator design pattern using the ITroll interface and its derived classes.
 class TrollTests : public ::testing::Test
 {
-
 protected:
 
-	ITroll* mpTroll = nullptr;
+	std::unique_ptr<BasicTroll> mpTroll = nullptr;
+	
+
+	//ITroll* mpTroll = nullptr;
 	
 	// You can remove any or all of the following functions if their bodies would
 	// be empty.
@@ -21,14 +25,13 @@ protected:
 
 	void SetUp() override
 	{
-		mpTroll = new BasicTroll("Sam");
+		mpTroll = std::make_unique<BasicTroll>("Sam");
 		// Code here will be called immediately after the constructor (right
 		// before each test).
 	}
 
 	void TearDown() override
 	{
-		delete mpTroll;
 		// Code here will be called immediately after each test (right
 		// before the destructor).
 	}
@@ -44,3 +47,12 @@ TEST_F(TrollTests, testGetName)
 	EXPECT_EQ(mpTroll->getName(), "Sam");
 }
 
+/*
+ * @Test clubbed troll decoration
+ */
+TEST_F(TrollTests, testClubbedDecorator)
+{
+	ClubbedTroll clubbedTroll(mpTroll.get());
+	clubbedTroll.attack();
+	
+}
