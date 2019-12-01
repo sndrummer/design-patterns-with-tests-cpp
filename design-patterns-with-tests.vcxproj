@@ -58,6 +58,7 @@
     <ClInclude Include="src\decorator\BasicTroll.h" />
     <ClInclude Include="src\decorator\ITroll.h" />
     <ClInclude Include="src\decorator\TrollDecorator.h" />
+    <ClInclude Include="src\decorator\UglyTroll.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\decorator\ClubbedTroll.cpp" />
@@ -70,6 +71,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\decorator\TrollDecorator.cpp" />
+    <ClCompile Include="src\decorator\UglyTroll.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
