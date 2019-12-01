@@ -1,5 +1,4 @@
 #pragma once
-
 #include <string>
 
 /**
@@ -8,7 +7,7 @@
 class ITroll
 {
 public:
-	virtual const std::string& getName() const = 0;
+	virtual std::string getName() const = 0;
 	virtual void attack() = 0;
 
 	// note -- you cannot have a pure virtual destructor or an error will occur 

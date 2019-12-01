@@ -15,4 +15,4 @@
 
 1. Go to C++ Project Configurations->General->Addition Include Directories, and then add `$(SolutionDir)src\`
 2. All cpp files must have the `#include <pch.h>` at the top apparently... this is a solution for now
-3. Now Create a Test file such as `TrollTests.cpp` in the test directory and make sure it inherits from ::Test::
+3. Now Create a Test file such as `DecoratorTests.cpp` in the test directory and make sure it inherits from ::Test::

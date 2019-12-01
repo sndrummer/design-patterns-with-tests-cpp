@@ -3,17 +3,20 @@
 #include <iostream>
 
 
-ClubbedTroll::ClubbedTroll(ITroll* troll) : mpTroll(troll)
+ClubbedTroll::ClubbedTroll(ITroll* troll) : TrollDecorator(troll)
 {
 }
 
-const std::string& ClubbedTroll::getName() const
+/*
+ * Calls the parent getName and decorates/appends to it
+ */
+std::string ClubbedTroll::getName() const
 {
-	return mpTroll->getName();
+	return std::string(TrollDecorator::getName() + ", the clubbed troll");
 }
 
 void ClubbedTroll::attack()
 {
-	mpTroll->attack();
-	std::cout << "The troll attacks with a club!!" << std::endl;
+	TrollDecorator::attack();
+	std::cout << " with a club";
 }

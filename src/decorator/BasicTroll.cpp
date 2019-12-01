@@ -8,10 +8,10 @@ BasicTroll::BasicTroll(const char* name) : mName(name)
 
 void BasicTroll::attack()
 {
-	std::cout << "The Troll attacks!!" << std::endl;
+	std::cout << "The Troll attacks";
 }
 
-const std::string& BasicTroll::getName() const
+std::string BasicTroll::getName() const
 {
 	return mName;
 }

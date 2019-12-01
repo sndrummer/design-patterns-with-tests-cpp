@@ -8,11 +8,11 @@
 class BasicTroll final : public ITroll
 {
 public:
-	BasicTroll(const char* name);
+	explicit BasicTroll(const char* name);
 	~BasicTroll() override = default;
 
 	void attack() override;
-	const std::string& getName() const override;
+	std::string getName() const override;
 	
 	
 private:
