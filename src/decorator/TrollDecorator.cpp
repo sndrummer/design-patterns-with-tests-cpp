@@ -12,6 +12,5 @@ void TrollDecorator::attack()
 
 std::string TrollDecorator::getName() const
 {
-	auto name = mpTroll->getName();
-	return name;
+	return mpTroll->getName();
 }
